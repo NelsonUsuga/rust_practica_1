@@ -6,7 +6,10 @@ fn main() {
 		(version:crate_version!())
 		(author:"Nelson Úsuga")
 		(about:"Curso de rust")
+		(@arg input: +required "Mande un valor")
 	).get_matches();
+
+	println!("Input = {:?}", _clap.value_of("input"));
 
 	println!("done");
 }
